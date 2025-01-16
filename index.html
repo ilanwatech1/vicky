@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vicky's Exquisite Cut</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: white; /* Change background to white */
+            color: #333; /* Change text color to dark for contrast */
+        }
+
+        .active-link {
+            color: #fbbf24; /* Tailwind amber-400 */
+        }
+
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeIn 0.8s forwards;
+        }
+
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .circle-image {
+            width: 350px; /* Increased size */
+            height: 350px; /* Increased size */
+        }
+
+        .carousel-item {
+            min-width: 300px; /* Adjust based on your design */
+        }
+
+        .box-shadow {
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .footer {
+            background-color: #f8f8f8; /* Light gray background for footer */
+            padding: 20px 0;
+        }
+
+        .footer a {
+            color: #333; /* Dark text color for footer links */
+        }
+
+        .footer a:hover {
+            color: #fbbf24; /* Change color on hover */
+        }
+    </style>
+</head>
+<body class="font-sans">
+    <!-- Hero Section -->
+    <header id="home" class="relative h-screen flex items-center justify-center bg-cover bg-center" style="background-image: url('https://i.pinimg.com/736x/bb/d5/2c/bbd52c632afdc016715d2ba76d2e8388.jpg');">
+        <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+        <div class="relative text-center">
+            <h1 class="text-4xl sm:text-6xl font-extrabold mb-4 text-white">Vicky's Exquisite Cut</h1>
+            <p class="text-lg sm:text-xl font-light text-white">Where style meets precision</p>
+        </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-gray-900 bg-opacity-80 backdrop-blur-md z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="text-2xl font-bold text-white">Vicky's</div>
+                <div class="block lg:hidden">
+                    <button id="menu-toggle" class="text-white focus:outline-none">
+                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+                        </svg>
+                    </button>
+                </div>
+                <div class="hidden lg:flex space-x-4">
+                    <a href="#home" class="nav-link text-white hover:text-gray-400">Home</a>
+                    <a href="#services" class="nav-link text-white hover:text-gray-400">Services</a>
+                    <a href="#contact" class="nav-link text-white hover:text-gray-400">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden bg-gray-800 lg:hidden">
+            <a href="#home" class="nav-link block px-4 py-2 text-white hover:bg-gray-700">Home</a>
+            <a href="#services" class="nav-link block px-4 py-2 text-white hover:bg-gray-700">Services</a>
+            <a href="#contact" class="nav-link block px-4 py-2 text-white hover:bg-gray-700">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Services Section -->
+    ```html
+    <section id="services" class="py-32 bg-gray-800 text-center">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-6 text-white">Our Services</h2>
+            <p class="mb-12 text-gray-400">Tailored haircuts, shaves, and grooming designed to leave you looking your best.</p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-white">Haircuts</h3>
+                    <p class="text-gray-400">Precision cuts tailored to your style.</p>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-white">Shaves</h3>
+                    <p class="text-gray-400">Traditional and modern shaving techniques.</p>
+                </div>
+                <div class="p-6 bg-gray-900 rounded-lg shadow-lg">
+                    <h3 class="text-xl font-bold mb-2 text-white">Beard Grooming</h3>
+                    <p class="text-gray-400">Expert care for a well-maintained look.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-32 bg-gray-900 fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">Get in Touch</h2>
+            <div class="flex flex-col lg:flex-row items-center lg:items-start">
+                <!-- Image -->
+                <div class="lg:w-1/2 mb-8 lg:mb-0 flex justify-center">
+                    <img src="https://i.pinimg.com/236x/56/08/ba/5608ba20d9af99cbff2e08f96fdea42e.jpg" alt="Contact" class="circle-image rounded-full shadow-lg">
+                </div>
+                <!-- Write-Up -->
+                <div class="lg:w-1/2 text-left lg:pl-12">
+                    <p class="text-lg text-gray-400 mb-8">We would love to hear from you! Whether you have questions, want to book an appointment, or just want to say hello, feel free to reach out to us.</p>
+                    <form id="contact-form" class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full p-2 rounded bg-gray-800 text-white" required>
+                        <input type="email" placeholder="Your Email" class="w-full p-2 rounded bg-gray-800 text-white" required>
+                        <textarea placeholder="Your Message" class="w-full p-2 rounded bg-gray-800 text-white" rows="4" required></textarea>
+                        <button type="submit" class="bg-yellow-500 text-gray-900 p-2 rounded hover:bg-yellow-400 transition">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-32 bg-gray-800">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl sm:text-4xl font-bold mb-12 text-center text-white">What Our Clients Say</h2>
+            <div class="overflow-hidden relative">
+                <div class="flex transition-transform duration-500" id="testimonial-carousel">
+                    <div class="carousel-item p-6 bg-gray-900 rounded-lg shadow-lg mx-2">
+                        <p class="text-gray-400">"Vicky's Exquisite Cut is the best! I always leave feeling fresh and stylish." - Chinedu</p>
+                    </div>
+                    <div class="carousel-item p-6 bg-gray-900 rounded-lg shadow-lg mx-2">
+                        <p class="text-gray-400">"The service is top-notch, and the team is very professional." - Adaobi</p>
+                    </div>
+                    <div class="carousel-item p-6 bg-gray-900 rounded-lg shadow-lg mx-2">
+                        <p class=" text-gray-400">"I love my new haircut! Vicky really knows her stuff." - Emeka</p>
+                    </div>
+                    <div class="carousel-item p-6 bg-gray-900 rounded-lg shadow-lg mx-2">
+                        <p class="text-gray-400">"A great experience every time I visit. Highly recommend!" - Ify</p>
+                    </div>
+                </div>
+                <button id="prev" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-gray-900 p-2 rounded hover:bg-yellow-400 transition">Prev</button>
+                <button id="next" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-yellow-500 text-gray-900 p-2 rounded hover:bg-yellow-400 transition">Next</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer fade-in">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h3 class="text-xl font-bold mb-4">Stay Connected</h3>
+            <div class="flex justify-center space-x-4 mb-4">
+                <a href="#" class="hover:underline">Facebook</a>
+                <a href="#" class="hover:underline">Twitter</a>
+                <a href="#" class="hover:underline">Instagram</a>
+            </div>
+            <p class="text-gray-600">© 2023 Vicky's Exquisite Cut. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const menuToggle = document.getElementById('menu-toggle');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelectorAll('.nav-link');
+        const sections = document.querySelectorAll('section');
+        const testimonialCarousel = document.getElementById('testimonial-carousel');
+        const prevButton = document.getElementById('prev');
+        const nextButton = document.getElementById('next');
+        let currentIndex = 0;
+
+        // Mobile menu toggle
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Highlight active link on scroll
+        window.addEventListener('scroll', () => {
+            let scrollPos = window.scrollY;
+
+            sections.forEach((section) => {
+                const offsetTop = section.offsetTop;
+                const offsetHeight = section.offsetHeight;
+                const id = section.getAttribute('id');
+
+                if (scrollPos >= offsetTop - 50 && scrollPos < offsetTop + offsetHeight) {
+                    navLinks.forEach((link) => link.classList.remove('active-link'));
+                    document.querySelector(`a[href="#${id}"]`).classList.add('active-link');
+                }
+            });
+        });
+
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Your message has been sent!');
+            this.reset(); // Reset the form after submission
+        });
+
+        // Testimonial carousel functionality
+        function updateCarousel() {
+            const totalItems = testimonialCarousel.children.length;
+            const offset = -currentIndex * 100; // Move by 100% for each item
+            testimonialCarousel.style.transform = `translateX(${offset}%)`;
+        }
+
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % testimonialCarousel.children.length;
+            updateCarousel();
+        });
+
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + testimonialCarousel.children.length) % testimonialCarousel.children.length;
+            updateCarousel();
+        });
+
+        // Auto-rotate testimonials every 5 seconds
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % testimonialCarousel.children.length;
+            updateCarousel();
+        }, 5000);
+    </script>
+</body>
+</html>
